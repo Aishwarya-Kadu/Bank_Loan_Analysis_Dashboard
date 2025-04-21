@@ -323,7 +323,7 @@ By maintaining the same KPIs across all pages, users are enabled to perform cros
 
 **Net Interest Margin (NIM):** NIM measures the bank’s profitability from interest-earning loans, calculated as the difference between interest income earned and the funding cost, relative to the disbursed loan value. This metric reflects how efficiently the bank is generating profits from its lending operations.
 
-**Average Profitability Ratio:** This reflects the average net income margin across all client companies. It is derived from the ratio of net profit to total revenue, indicating the overall financial health and operational efficiency of borrowers. A higher profitability ratio implies lower likelihood of default and better repayment potential.
+**Profitability Ratio:** The profitability ratio measures how much profit the bank earns for every dollar of loan disbursed, indicating the efficiency of its lending operations.
 
 
 ### Dynamic Interactivity with each KPI
