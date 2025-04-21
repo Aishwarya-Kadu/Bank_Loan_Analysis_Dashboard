@@ -3,11 +3,13 @@ An interactive dashboard for analyzing bank loan data to uncover approval trends
 
 ## Contents
 
-- Project Overview
-- Tools
-- Data Overview
-- Dashboard Structure
-- Results
+- [Project Overview](project-overview)
+- [Tools](tools)
+- [Data Overview](data-overview)
+- [Dashboard Structure](dashboard-structure)
+- [Interactive Filters](interactive-filters)
+- [Navigation and User Experience](navigation-and-user-experience)
+- [Results](results)
 
 ## Project Overview
 
