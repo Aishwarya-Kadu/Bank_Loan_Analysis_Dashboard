@@ -6,6 +6,8 @@ An interactive dashboard for analyzing bank loan data to uncover approval trends
 - Project Overview
 - Tools
 - Data Overview
+- Dashboard Structure
+- Results
 
 ## Project Overview
 
@@ -118,7 +120,8 @@ The project consists of four main dashboard pages, each designed to highlight a 
 ### Overview Page
 The Overview Page provides a high-level summary of the loan portfolio, offering insights into the distribution, status, and key metrics of the loans. It features visualizations like a map showing state-wise loan distribution, a bar chart depicting loan issuance by industry, and a matrix table summarizing financial data based on loan status (Active, Closed, Defaulted). These visualizations help users quickly assess the health and trends within the loan portfolio, making it easier to identify key patterns and areas requiring attention.
 
-![image](https://github.com/user-attachments/assets/303c5477-5346-4750-bbb0-5a90f26f376c)
+<img width="796" alt="Overview" src="https://github.com/user-attachments/assets/3daf4e83-f033-40ee-ac0e-9bc28896e1d6" />
+
 
 #### 1. Map Visualization: Geographic Distribution of Loans by State
 A dynamic, interactive map highlights the distribution of loans across various U.S. states. The visualization provides insight into two key metrics for each state:
@@ -166,7 +169,8 @@ By combining these metrics, the matrix table not only supports credit risk evalu
 
 The Allocation Page of the dashboard provides a detailed breakdown of the loan portfolio in terms of product allocation and corresponding profitability. This section is designed to help stakeholders understand how financial resources are distributed across loan types and how each product contributes to the bank’s bottom line. This section of the dashboard not only enables product-level analysis but also links operational decisions with financial performance. It empowers the bank’s strategic teams to refine loan offerings, optimize capital allocation, and maximize profitability. 
 
-![image](https://github.com/user-attachments/assets/e39cea7b-30e8-4dec-a4e4-b7fdf21640d4)
+<img width="796" alt="Allocation" src="https://github.com/user-attachments/assets/df624733-5920-4884-bc44-531dd09d94e4" />
+
 
 #### 1. Bar Chart: Number of Loans Issued by Loan Type
 
@@ -210,7 +214,8 @@ This visualization provides insight into:
 
 The Receivables Page of the dashboard plays a critical role in analyzing the bank’s cash flow and revenue realization over time. It focuses on understanding the consistency and effectiveness of loan repayments, detecting early signs of financial stress among borrowers, and supporting liquidity planning. It provides a comprehensive view of cash movement through the lending lifecycle tracking how funds flow out through disbursement and return via repayments. It supports both operational execution and strategic oversight by offering data-driven insights into borrower behavior, payment discipline, and revenue realization patterns.
 
-![image](https://github.com/user-attachments/assets/a7e8542d-e677-482c-98d0-a87cc0dd513f)
+<img width="796" alt="Receivables" src="https://github.com/user-attachments/assets/f2afd483-330b-4a66-b4fd-a219f76bed29" />
+
 
 This page includes three key visualizations:
 
@@ -225,5 +230,250 @@ This line chart captures the total loan amount disbursed month over month, provi
 By observing these trends, decision-makers can fine-tune loan offerings, marketing efforts, and internal resource planning to align with customer demand cycles.
 
 
+#### 2. Line Chart: Monthly Profitability Trend
+
+This visualization presents the bank’s monthly profit over time. Profit is derived from interest income minus any losses or operational costs related to loan issuance and recovery. This chart offers valuable insights into:
+
+- Earnings volatility and the effect of loan performance on profitability.
+- Long-term growth or decline in net income from lending operations.
+- Financial health and sustainability of the loan portfolio.
+
+This trend analysis is crucial for financial forecasting and helps in evaluating whether loan performance aligns with strategic profit goals.
+
+#### 3. Line & Area Chart Combination: Expected vs. Actual Monthly Installments
+
+This chart compares the expected monthly installment payments (based on loan agreements) with the actual payments received from clients. It uses a line chart to plot the expected payments and an area chart to show the actual collections.
+
+This dual visualization is particularly important for:
+
+- Identifying repayment gaps or shortfalls that could indicate default risk or client cash flow issues.
+- Monitoring collection efficiency over time.
+- Detecting trends in late or missed payments, allowing for early intervention or risk mitigation.
+
+By quantifying the deviation between expected and actual cash inflows, this chart helps the bank manage working capital, assess credit risk, and refine loan recovery strategies.
 
 
+### Ledger Page
+
+**Ledger Page: Comprehensive Tabular Loan Analysis**
+
+The Ledger Page of the dashboard serves as a detailed analytical repository, offering a tabular view of all individual loans issued by the bank. Unlike the summary dashboards and visualizations on other pages, this section provides a granular, record-level perspective to facilitate in-depth analysis, auditing, and decision support at the transaction level. This page enhances the depth of analysis available in the dashboard by shifting from high-level visual summaries to detailed, actionable data. It empowers various stakeholders to take informed actions, enforce data governance, and align loan monitoring with institutional policies and performance goals.
+
+<img width="796" alt="Ledger" src="https://github.com/user-attachments/assets/fdc15b91-b376-409c-a4f4-dbbc38ef93b3" />
+
+
+This page is particularly useful for:
+
+- Loan officers and analysts performing case-by-case evaluations.
+- Risk and compliance teams conducting portfolio reviews or audits.
+- Executives and managers requiring access to detailed loan attributes in a structured format.
+
+**Key Columns and Their Purpose**
+
+The table on the Ledger Page contains the following fields, each chosen to offer a well-rounded view of each loan’s profile, performance, and risk exposure:
+
+**Loan ID:** A unique identifier for each loan issued, used to track individual loan records and link them across datasets.
+
+**Client Name:** The name of the client company to whom the loan was issued, helping users quickly identify and cross-reference client-specific performance.
+
+**Business Tenure:** Indicates the number of years the client company has been operational. This metric is critical for evaluating borrower maturity and risk—newer businesses may carry higher default risk.
+
+**Credit Score:** A numerical assessment of the borrower’s creditworthiness. This serves as a key input for risk profiling and interest rate determination.
+
+**Loan Type:** Specifies the nature of the loan issued (e.g., Term Loan, Line of Credit, Commercial Real Estate Loan). Understanding the distribution of loan types helps in segment-level performance assessment.
+
+**Interest Rate:** The rate at which the loan was issued, directly impacting expected revenue and repayment obligations.
+
+**Debt-to-Income (DTI) Ratio:** This financial ratio indicates the proportion of the borrower's income used to service debt. A high DTI ratio signals elevated financial stress and potential default risk.
+
+**Loan Amount Disbursed:** The total principal amount funded by the bank for each loan, critical for exposure and balance sheet assessments.
+
+**Repayment Totals:** The total amount repaid to date by the client. This includes both principal and interest components and allows tracking of repayment progress.
+
+**Outstanding Balance:** The remaining amount that the client is obligated to pay. This figure is derived by subtracting the repayment total from the total payable amount (principal + interest). It is essential for cash flow planning and collections management.
+
+**Utility of the Ledger Page**
+
+**Filtering and Drill-Down:** Users can apply filters on various columns (e.g., Loan Type, State, Credit Score range) to perform targeted analyses.
+
+**Compliance & Risk Reviews:** Enables identification of high-risk loans based on poor credit scores, high DTI ratios, or large outstanding balances.
+
+**Client Management:** Facilitates a better understanding of individual client loan behavior and engagement history, useful for relationship managers and client servicing teams.
+
+**Performance Auditing:** Allows auditors to track loan issuance and repayment histories, ensuring transparency and accountability.
+
+
+### Key Performance Indicators (KPIs)
+
+A central feature of the dashboard is the consistent presence of six high-level Key Performance Indicators (KPIs) displayed across all pages. These KPIs serve as core financial and operational metrics that offer immediate insight into the performance of the loan portfolio, and they dynamically update based on user-selected filters such as date range, loan type, business category, and geographical region.
+
+By maintaining the same KPIs across all pages, users are enabled to perform cross-sectional comparisons and assess performance from multiple analytical angles—by status, by client segment, by loan type, or over time.
+
+![image](https://github.com/user-attachments/assets/53465ffe-79ae-4b61-8395-8c6530a0f293)
+
+**Total Loan Amount Disbursed:** Represents the aggregate principal amount of all loans issued by the bank. It provides a top-line view of the bank’s lending activity and financial exposure. Monitoring this KPI helps in understanding the scale of operations and supports capital allocation planning.
+
+**Total Amount Received:** Indicates the total repayments collected from borrowers to date. This figure includes both principal and interest payments and is crucial for assessing cash inflows, loan recovery efficiency, and overall repayment health of the loan book.
+
+**Average Interest Rate:** This is the mean interest rate applied across all issued loans. It reflects the general pricing of credit products and provides insight into the bank’s lending policy. A rising average rate could indicate riskier portfolios or changing market conditions.
+
+**Average Debt-to-Income (DTI) Ratio:** Shows the average proportion of a borrower's income committed to debt repayment. A key indicator of borrower affordability and credit risk, it helps in assessing the overall financial stress of the client base. Higher average DTI ratios may warrant increased monitoring or stricter loan issuance criteria.
+
+**Net Interest Margin (NIM):** NIM measures the bank’s profitability from interest-earning loans, calculated as the difference between interest income earned and the funding cost, relative to the disbursed loan value. This metric reflects how efficiently the bank is generating profits from its lending operations.
+
+**Average Profitability Ratio:** This reflects the average net income margin across all client companies. It is derived from the ratio of net profit to total revenue, indicating the overall financial health and operational efficiency of borrowers. A higher profitability ratio implies lower likelihood of default and better repayment potential.
+
+
+### Dynamic Interactivity with each KPI
+
+**Interactive and filter-responsive:** Values automatically adjust based on filters applied in the dashboard, such as loan status, loan type, industry segment, time period, or region.
+
+**Comparative:** Because KPIs appear uniformly across all dashboard pages, users can easily benchmark performance across different dimensions (e.g., defaulted vs. active loans, state-wise disbursements, industry-specific profitability).
+
+**Actionable:** Each metric provides quick access to decision-critical insights that support strategic initiatives, risk mitigation, and portfolio optimization.
+Including these KPIs throughout the dashboard ensures cohesive storytelling and actionable insights, enabling stakeholders from analysts to executives to make data-informed decisions confidently and consistently.
+
+
+
+### Interactive Filters
+
+To enhance the dashboard's flexibility and support targeted, user-driven analysis, a set of global interactive filters is applied across all dashboard pages. These filters allow users to dynamically segment the loan portfolio, tailor the visualizations, and drill down into specific subsets of the data. This ensures the dashboard is not only informative but also highly customizable for diverse analytical needs.
+
+#### State Filter
+
+**Type:** Multi-select dropdown
+
+**Function:** Enables users to filter all metrics and visuals based on specific U.S. states.
+
+**Use Case:** This is particularly useful for regional performance analysis, identifying high-risk or high-growth states, and comparing loan disbursement or profitability trends geographically.
+
+**Example:** A user can select “California” and “Texas” to view loan performance exclusively in those states.
+
+#### Business Type Filter
+
+**Type:** Multi-select dropdown
+
+**Function:** Allows filtering based on the industry classification of the client companies.
+
+**Categories:**
+
+- Technology and IT Services
+- Hospitality and Tourism
+- Construction and Real Estate
+- Energy and Utilities
+- Transportation and Logistics
+- Retail and E-Commerce
+- Healthcare and Pharmaceuticals
+- Manufacturing
+
+**Use Case**: Enables comparison of financial metrics across industries, such as identifying which sectors have higher default rates or yield higher profitability.
+
+**Example:** Users can isolate data for “Retail and E-Commerce” to evaluate loan performance trends specific to that industry.
+
+#### Credit Score Range Filter
+
+**Type:** Categorical filter with three predefined credit score brackets
+
+**Ranges:**
+
+- 750–850 (Excellent Credit)
+- 700–749 (Good Credit)
+- 650–699 (Fair Credit)
+  
+**Function:** Allows users to explore loan behavior and risk profiles based on borrower credit quality.
+
+**Use Case:** Ideal for risk-based analysis. For example, users can examine whether lower credit score clients have higher default rates or if higher score borrowers contribute more to profitability.
+
+**Example:** Filtering by “650–699” enables a focused view of higher-risk loans and their performance patterns.
+
+#### Purpose and Benefits
+
+These filters empower users to perform segmented analysis and derive insights that are context-specific and actionable. They promote better understanding of risk, return, and client demographics across various dimensions of the loan portfolio. Filters work in tandem with dynamic KPIs, charts, and tables, ensuring that all visual components of the dashboard respond synchronously to the applied filters. This interactivity transforms the dashboard into a self-service BI tool, supporting use cases across strategy, compliance, risk management, and lending operations. Including these filters enhances the dashboard's usability, personalization, and analytical power, ensuring that stakeholders from different business functions can extract the insights most relevant to their objectives
+
+### Navigation and User Experience
+
+To improve usability, custom navigation buttons were added to enable seamless switching between the dashboard pages. This allows users to easily explore different dimensions of the loan portfolio without needing to return to the main menu or external links.
+
+To enhance dashboard usability and ensure a streamlined analytical workflow, custom navigation buttons have been implemented across all pages. These buttons are prominently positioned and styled for easy access, allowing users to switch between different analytical views without needing to return to a homepage or interact with external menus.
+
+Key Features:
+
+- Page-to-page navigation: Users can move directly from one dashboard section (e.g., Allocation) to another (e.g., Receivables or Ledger) using intuitive navigation controls.
+- Consistent layout: Navigation buttons are available on all pages, maintaining a consistent user interface and experience.
+- Improved accessibility: Reduces the need for manual page selection, enabling quicker access to desired insights and enhancing overall productivity.
+
+Encourages deeper data exploration by minimizing friction. Facilitates cross-sectional comparisons by allowing users to switch perspectives quickly. Enhances the dashboard’s overall intuitiveness and user-friendliness, particularly for non-technical stakeholders.
+
+
+### Results
+
+**Top States by Loan Volume**
+
+- Colorado
+- North Dakota
+- Arkansas
+- Pennsylvania
+- South Carolina
+
+**Industries with large loan disbursement**
+
+- Hospitality and Tourism
+- Healthcare and Pharmaceuticals
+
+
+**Risk and Profitability Pattern**
+
+Defaulted Loans are associated with
+
+- High Debt-to-income ratios
+- Lowest Profitability Ratios
+
+The following companies are likely defaulters due to high DTI ratio
+
+- Smith PLC
+- Shield, Jones and Flores
+- Rivera
+- Smith Limited
+- Harell, Walten and Miller
+
+**Loan Types**
+
+- Most popular loan type is Merchant Cash Advance
+- Least issued product is Line of Credit
+- Commercial Real Estate loan is 2nd most issued loan type but has lowest bank profitability in monetary value.
+
+**Industry Profitability**
+
+Manufacturing:
+
+- Lowest disbursement amount: $17 million
+- High profitability ratio: 11.49%
+
+Most Profitable Industries
+
+- Transportation and Logistics
+- Manufacturing
+- Energy and Utilities
+
+**Loan Volume and Profitability Trends**
+
+- Highest disbursement month: February
+- Decline in disbursements: March to May (likely due to policy tightening or macroeconomic caution)
+- Recovery in trend: June
+- Profitability decline despite full installment payments: New loans issued late in the year (e.g., November) contribute fewer payments (only December), lowering annual profitability despite incoming payments
+
+**Profitability Metrics**
+
+- Total loan amount disbursed: $202.9 million
+- Total amount received: $67 million
+- Average interest rate: 8.80%
+- Average DTI: 4.71%
+- Net interest margin: 7.19%
+- Profitability ratio: 9.78%
+
+
+**Most Profitable Loan Types**
+
+- Merchant Cash Advance
+- Invoice Financing
+- Line of Credit
