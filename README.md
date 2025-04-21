@@ -34,6 +34,12 @@ The bank benefits from this project by gaining:
 - Faster and more informed decision-making for loan approvals, risk management, and resource deployment.
 - Support for regulatory compliance through transparent and up-to-date reporting capabilities.
 
+
+## Tools
+
+- Microsoft Excel
+- Tableau
+
 ## Data Overview
 
 The dashboard acts as a strategic asset that supports smarter, faster, and more sustainable lending decisions. To achieve this, three datasets were integrated and modeled:
